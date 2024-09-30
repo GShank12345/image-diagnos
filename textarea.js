@@ -127,7 +127,7 @@ textpage.onclick = function textpage()
         body: data = JSON.stringify({
             'model': "gpt-4o-mini",
             'messages': [{role: "user",  content: [
-                { type: "text", text: "Diagnose the image with no pleasentries." },
+                { type: "text", text: "Diagnose the image." },
                 {
                     type: "image_url",
                     image_url: {
