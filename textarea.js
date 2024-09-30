@@ -12,14 +12,14 @@ var yourfullname = ""
 var iv = CryptoJS.enc.Base64.parse("");
 // alert("Enter your name.")
 
- fetch('https://oszd3wrcv4.execute-api.us-east-1.amazonaws.com/default/textauth').then((response) => response.json())
+ fetch('your url').then((response) => response.json())
   .then ((data) =>  {
   decrypt1 = data
-// console.log("decrypt1-aut with iv",decrypt1)
+
  decrypted = CryptoJS.AES.decrypt(decrypt1,"",{});
-     // console.log("text key", decrypted)
+    
  textkey =  decrypted.toString(CryptoJS.enc.Utf8)
-     // console.log("text key", textkey)
+ 
  });
 
 window.document.write("<br><br><br><style>.dcolor{width:20%;text-align:center;background-color:lightblue}</style> </head><button type='button' id='downloadpage' title='Text Correct' onclick='textpage()' class='dcolor'><h4>Diagnose Image</h4></button>&nbsp &nbsp &nbsp &nbsp &nbsp<style>.dcolor1{width:15%;text-align:center;background-color:lightblue}</style> </head><button type='button' id='clearpage' title='Clear page' onclick='clearpage()' class='dcolor1'><h4>Clear Image</h4></button>&nbsp &nbsp &nbsp<style>.dcolor2{width:15%;text-align:center;bold;text-size:4}</style><label class='dcolor2'><b>Enter email:</b></label>&nbsp&nbsp<input height=150 type='text' id='enteremail' placeholder='Enter email' title='enter-email' onclick='enteremail()'></input>&nbsp&nbsp&nbsp <button type='button' id='mailto' title='Email to' onclick='mailtopage()' class='dcolor1'><h4>Email Text</h4></button>&nbsp &nbsp &nbsp<button type='button' id='printpage' title='Print Text' onclick='printpage()' class='dcolor1'><h4>Print Text</h4></button> &nbsp &nbsp &nbsp <br><br><br>")
